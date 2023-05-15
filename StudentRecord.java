@@ -105,7 +105,7 @@ public class StudentRecord
         System.out.println("Student report:");
         for (Student student : students) 
         {
-            System.out.println(student.toString());
+            System.out.println(student.Infos());
         }
     }
 
