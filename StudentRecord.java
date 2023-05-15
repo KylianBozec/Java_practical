@@ -58,7 +58,7 @@ public class StudentRecord
             {
                 dob = LocalDate.parse(dobStr);
             } 
-            catch (DateTimeParseException e) 
+            catch (DateTimeParseException error) 
             {
                 System.out.println("Invalid date format.");
             }

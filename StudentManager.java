@@ -2,36 +2,36 @@ package Java_practical;
 import java.util.*;
 import java.util.logging.*;
 
-    class StudentManager<T> 
+    class StudentManager<student> 
     {
-        private List<T> students;
+        private List<student> students;
     
         public StudentManager() 
         {
-            students = new ArrayList<T>();
+            students = new ArrayList<student>();
         }
-    
-        public void add(T student) 
-        {
-            students.add(student);
-            Logger.getLogger("StudentManager").log(Level.INFO, "Student added: " + student.toString());
-        }
-    
-        public void remove(T student) 
+
+        public void remove(student student) 
         {
             students.remove(student);
             Logger.getLogger("StudentManager").log(Level.INFO, "Student removed: " + student.toString());
         }
     
-        public List<T> getAll() 
+        public void add(student student) 
+        {
+            students.add(student);
+            Logger.getLogger("StudentManager").log(Level.INFO, "new student: " + student.toString());
+        }
+    
+        public List<student> getAll() 
         {
             return students;
         }
     
-        public List<T> search(String keyword) 
+        public List<student> search(String keyword) 
         {
-            List<T> result = new ArrayList<T>();
-            for (T student : students) {
+            List<student> result = new ArrayList<student>();
+            for (student student : students) {
                 if (student.toString().contains(keyword)) 
                 {
                     result.add(student);
